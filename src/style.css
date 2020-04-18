@@ -1,0 +1,113 @@
+body{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(13, 77, 55);
+}
+
+#container{
+    background-color: rgb(13, 77, 55);
+    color: white;
+    min-width: 350px;
+    min-height: 450px;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 18% 20% 40% auto;
+}
+
+#title{
+    grid-row: 1/2;
+}
+
+#btn-container{
+    grid-row: 2/3;
+    margin-top: 1em;
+    font-size: larger;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#btn-container h3{
+    margin: 0;
+}
+
+#break-set{
+    display: grid;
+    grid-template-rows: 38% auto;
+    grid-template-columns: 40% auto 40%;
+    margin-right: 1em;
+}
+#break-label{
+    grid-column: 1/4;
+}
+#break-increment, #break-decrement, #session-increment, #session-decrement,   
+#break-length, #session-length{
+    font-size: xx-large;
+}
+#break-increment:hover, #break-decrement:hover, #session-increment:hover, #session-decrement:hover{
+    cursor: pointer;
+}
+
+#session-set{
+    display: grid;
+    grid-template-rows: 38% auto;
+    grid-template-columns: 40% auto 40%;
+    margin-left: 1em;
+}
+#session-label{
+    grid-column: 1/4;
+}
+
+#timer-label{
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+#session{
+    grid-row: 3/4;
+}
+#time-left{
+    font-family: monospace;
+    font-size: 60px;
+    border-top: white solid 2px;
+    border-bottom: white solid 2px;
+    border-radius: 15px;
+}
+
+#footer{
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: auto 20% 20% auto;
+}
+#start_stop{
+    grid-column: 2/3;
+    height: 50%;
+    border: 2px solid white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+}
+#reset{
+    grid-column: 3/4;
+    height: 50%;
+    border: 2px solid white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2px;
+}
+#start_stop:hover, #reset:hover{
+    cursor: pointer;
+}
+
+@media(max-width: 600px){
+    #container{
+        width: 100vw;
+        height: 100vh;
+    }
+}
